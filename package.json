@@ -8,16 +8,15 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "grunt": "^1.0.1",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-jshint": "^1.0.0",
     "grunt-contrib-less": "^1.4.0",
     "grunt-contrib-watch": "^1.0.0",
-    "jshint-stylish": "^2.2.1"
-  },
-  "devDependencies": {
     "jasmine-core": "^2.4.1",
+    "jshint-stylish": "^2.2.1",
     "karma": "^1.2.0",
     "karma-chrome-launcher": "^2.0.0",
     "karma-firefox-launcher": "^1.0.0",

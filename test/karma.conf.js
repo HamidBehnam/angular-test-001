@@ -17,8 +17,11 @@ module.exports = function(config) {
     files: [
       'bower_components/angular/angular.js',
       'bower_components/angular-mocks/angular-mocks.js',
-      'dist/js/dist-ant.js',
-      'src/js/project/modules.content/test/**/*.js'
+      'bower_components/angular-route/angular-route.js', // make sure you've added all the files which are used.
+      //'dist/js/dist-ant.js',  >>>>>>>>>> if you're gonna use karma in auto scan mode (always open), it's not a good idea to watch the result of Grunt processes, because if you change the js file and spec file at the same time, karma reacts 2 times. first time is when it senses spec file is changed and the second time is when it senses grunt has generated a new file. However if you wanna put the karma inside the grunt tasks there's no problem with using the result of grunt concat as a source file, because in this case you have to turn the auto scan off, so it'll be fired by grunt and grunt can fire karma when the final js file is ready. Warning: If you're gonna put karma in grunt tasks be prepared to wait for tests to be run every time you change something in the code even less or css files.
+      'src/js/project/modules/*.js',
+      'src/js/project/modules.content/**/*.js',
+      'src/js/test/**/*.js'
     ],
 
 
